@@ -80,11 +80,13 @@
   environment.systemPackages = with pkgs; [
     vim
     hyprland
+    wayland-scanner
     waybar
     mako
     libnotify
     hyprpaper
     kitty
+    kdePackages.dolphin
     wofi
     pywal
     pywalfox-native
@@ -94,6 +96,7 @@
     git
     vscode
     libgcc
+    cmake
     python3
     lua
     discord
