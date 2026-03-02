@@ -8,7 +8,7 @@ They're finally organized (for now). I've previously used Arch and NixOS, both w
 │   └── .config
 │       └── hypr
 │           ├── binds.conf
-│           ├── colorus.conf
+│           ├── colours.conf
 │           ├── hyprland.conf
 │           └── hyprpaper.conf
 ├── nixos
