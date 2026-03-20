@@ -28,3 +28,32 @@ They're finally organized (for now). I've previously used Arch and NixOS, both w
 │           └── style.css
 └── .bashrc
 ```
+
+## bluetoothctl
+
+```bash
+bluetoothctl
+power on
+agent on
+default-agent
+scan on
+pair <hex>
+connect <hex>
+trust <hex>
+```
+
+## github ssh
+
+```bash
+ssh-keygen -t ed25519 -c "email@example.com"
+enter file in which to save: ~/.ssh
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+```
+
+## disc drive
+
+```bash
+modprobe sg
+```
