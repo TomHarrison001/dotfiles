@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
     ];
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -80,7 +82,6 @@
   environment.systemPackages = with pkgs; [
     vim
     hyprland
-    wayland-scanner
     waybar
     mako
     libnotify
@@ -96,7 +97,8 @@
     git
     vscode
     libgcc
-    cmake
+    clang
+    unzip
     python3
     lua
     discord
@@ -107,7 +109,6 @@
     plex-desktop
     spotify
     makemkv
-    unzip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -121,7 +122,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
