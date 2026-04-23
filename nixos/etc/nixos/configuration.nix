@@ -166,10 +166,10 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd}/bin/agreety --cmd Hyprland";
+        command = "${pkgs.greetd}/bin/agreety --cmd start-hyprland";
       };
       initial_session = {
-        command = "Hyprland";
+        command = "start-hyprland";
         user = "rockafelladev";
       };
     };
