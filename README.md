@@ -5,6 +5,7 @@ They're finally organized (for now). I've previously used Arch and NixOS, both w
 - [Files](#files)
 - [Arch Wifi](#arch-wifi)
 - [Nixos Wifi](#nixos-wifi)
+- [Nixos Flake](#nixos-flake)
 - [Bluetoothctl](#bluetoothctl)
 - [Github SSH](#github-ssh)
 - [Disc Drive](#disc-drive)
@@ -24,7 +25,8 @@ They're finally organized (for now). I've previously used Arch and NixOS, both w
 ├── nixos
 │   └── etc
 │       └── nixos
-│           └── configuration.nix
+│           ├── configuration.nix
+│           └── flake.nix
 ├── waybar
 │   └── .config
 │       └── waybar
@@ -54,6 +56,12 @@ exit
 
 ```bash
 nmcli device wifi connect <SSID> password <password>
+```
+
+### nixos flake
+
+```bash
+nix develop /etc/nixos/
 ```
 
 ### bluetoothctl

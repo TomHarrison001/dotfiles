@@ -27,7 +27,7 @@
           libpqxx
           nlohmann_json
           libjwt
-          openssl
+          libsodium
 
           vulkan-loader
           vulkan-headers
