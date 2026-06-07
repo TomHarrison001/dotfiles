@@ -10,3 +10,5 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]$ '
 
 (cat ~/.cache/wal/sequences &)
+
+export PATH="$HOME/.config/emacs/bin:$PATH"

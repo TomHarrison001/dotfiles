@@ -8,11 +8,16 @@ They're finally organized (for now). I've previously used Arch and NixOS, both w
 - [Nixos Flake](#nixos-flake)
 - [Bluetoothctl](#bluetoothctl)
 - [Github SSH](#github-ssh)
+- [doom sync](#doom-sync)
 - [Disc Drive](#disc-drive)
 
 ### Files
 
 ```
+├── doom
+│   ├── config.el
+│   ├── init.el
+│   └── packages.el
 ├── Downloads
 │   └── tanjiroBackground.png
 ├── hypr
@@ -85,6 +90,12 @@ enter file in which to save: ~/.ssh
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
+```
+
+### doom sync
+
+```bash
+doom sync
 ```
 
 ### disc drive
