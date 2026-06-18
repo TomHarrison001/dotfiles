@@ -23,7 +23,7 @@
 ;;
 
 (setq doom-font (font-spec :family "Terminess Nerd Font" :size 12 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "Terminess Nerd Font" :size 12))
+      doom-variable-pitch-font (font-spec :family "Terminess Nerd Font" :size 12 :weight 'semi-light))
 
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
@@ -35,7 +35,7 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'catppuccin)
-(setq catppuccin-flavor 'macchiato) ; 'frappe, 'latte, 'macchiato or 'mocha
+(setq catppuccin-flavor 'mocha) ; 'frappe, 'latte, 'macchiato or 'mocha
 (load-theme 'catppuccin t)
 ;; set transparency... I don't think this works so TODO
 (set-frame-parameter (selected-frame) 'alpha '(85 85))
@@ -49,6 +49,41 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+;; List files that org-agenda will use.
+(setq org-agenda-files
+      (list (concat org-directory "tasks.org")
+            (concat org-directory "notes.org")
+            (concat org-directory "journal.org")))
+
+;; Defines the global feedback destination for all your Org notes.
+(setq org-default-notes-file (concat org-directory "notes.org"))
+
+;; (Optional) Creates custom templates
+;; NOTE '%U' is an inactive timestamp meaning the item will not show
+;; in org-agenda. Use '&^t' for active timestamps instead.
+;; You can manually switch active/inactive with SHIFT-up/down.
+(setq org-capture-templates
+      `(
+        ;; Idea capture
+        ("i" "idea" entry
+         (file ,org-default-notes-file)
+         "* %? :idea\:n%U\n")
+
+        ;; Journal entry
+        ("j" "journal" entry
+         (file+olp+datatree ,(concat org-directory "journal.org"))
+         "* %U\n%?\n")
+
+        ;; Note with link to source
+        ("n" "note" entry
+         (file ,org-default-notes-file)
+         "* %? :note\n%U\n%a\n")
+
+        ;; Todo with context
+        ("t" "task" entry
+         (file+headline ,(concat org-directory "tasks.org") "Tasks")
+         "* TODO %?\n%^t\n%a\n")
+        ))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.

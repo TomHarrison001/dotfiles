@@ -55,3 +55,4 @@
 
 ;; theme
 (package! catppuccin-theme)
+(package! tldr)
