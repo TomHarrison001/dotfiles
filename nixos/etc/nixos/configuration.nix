@@ -86,7 +86,7 @@
     #mako
     #libnotify
     hyprpaper
-    kitty
+    alacritty
     kdePackages.dolphin
     wofi
     pywal
@@ -109,6 +109,10 @@
     #plex-desktop
     #spotify
     #makemkv
+  ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.terminess-ttf
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -168,6 +172,10 @@
       default_session = {
         command = "${pkgs.greetd}/bin/agreety --cmd start-hyprland";
       };
+      #initial_session = {
+      #  command = "start-hyprland";
+      #  user = "rockafelladev";
+      #};
     };
   };
 
