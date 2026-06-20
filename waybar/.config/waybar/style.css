@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "SF Pro Text", 'JetBrainsMono Nerd Font Propo', sans-serif;
-    font-size: 11px;
+    font-family: "Terminess Nerd Font", sans-serif;
+    font-size: 12px;
     border-radius: 0px;
     transition: 0.1s ease-in-out;
 }
@@ -106,13 +106,8 @@ button:hover {
     background-color: #274C5C;
 }
 
-#battery {
+#battery, #battery.charging, #battery.plugged {
     background-color: #274C5C;
-}
-
-#battery.charging, #battery.plugged {
-    color: #274C5C;
-    background-color: #26A65B;
 }
 
 @keyframes blink {
