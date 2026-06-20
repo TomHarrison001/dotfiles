@@ -67,7 +67,7 @@
         ;; Idea capture
         ("i" "idea" entry
          (file ,org-default-notes-file)
-         "* %? :idea\:n%U\n")
+         "* %? :idea:\n%U\n")
 
         ;; Journal entry
         ("j" "journal" entry
@@ -77,7 +77,7 @@
         ;; Note with link to source
         ("n" "note" entry
          (file ,org-default-notes-file)
-         "* %? :note\n%U\n%a\n")
+         "* %? :note:\n%U\n%a\n")
 
         ;; Todo with context
         ("t" "task" entry
