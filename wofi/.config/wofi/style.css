@@ -1,13 +1,15 @@
 window {
-  background-color: #274c5c;
-  color: #ffffff;
+    font-family: "Terminess Nerd Font";
+    font-size: 11pt;
+    background-color: #274c5c;
+    color: #ffffff;
 }
 
 #entry:selected {
-  background-color: #0e1f2a;
+    background-color: #0e1f2a;
 }
 
 #input {
-  background-color: #274c5c;
-  color: #ffffff;
+    background-color: #274c5c;
+    color: #ffffff;
 }

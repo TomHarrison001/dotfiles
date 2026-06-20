@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "Terminess Nerd Font", sans-serif;
+    font-family: "Terminess Nerd Font";
     font-size: 12px;
     border-radius: 0px;
     transition: 0.1s ease-in-out;
