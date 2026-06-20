@@ -2,24 +2,28 @@
 They're finally organized (for now). I've previously used Arch and NixOS, both with hyprland. I've customised my waybar, terminal and firefox based on the colours of my background (also included).
 
 ## Contents
-- [files](#files)
-- [arch wifi](#arch-wifi)
-- [nixos wifi](#nixos-wifi)
-- [nixos flake](#nixos-flake)
-- [pywal](#pywal)
-- [pywalfox](#pywalfox)
-- [bluetoothctl](#bluetoothctl)
-- [github ssh](#github-ssh)
-- [doom sync](#doom-sync)
-- [disc drive](#disc-drive)
+- [My dotfiles!](#my-dotfiles)
+  - [Contents](#contents)
+    - [File Overview](#file-overview)
+    - [arch wifi](#arch-wifi)
+    - [nixos wifi](#nixos-wifi)
+    - [nixos flake](#nixos-flake)
+    - [pywal](#pywal)
+    - [pywalfox](#pywalfox)
+    - [bluetoothctl](#bluetoothctl)
+    - [github ssh](#github-ssh)
+    - [doom sync](#doom-sync)
+    - [disc drive](#disc-drive)
 
-### Files
+### File Overview
 
 ```
 ├── doom
-│   ├── config.el
-│   ├── init.el
-│   └── packages.el
+│   └── .config
+│       └── doom
+│           ├── config.el
+│           ├── init.el
+│           └── packages.el
 ├── Downloads
 │   └── tanjiroBackground.png
 ├── gtk-3.0
