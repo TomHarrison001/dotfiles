@@ -22,6 +22,10 @@ They're finally organized (for now). I've previously used Arch and NixOS, both w
 │   └── packages.el
 ├── Downloads
 │   └── tanjiroBackground.png
+├── gtk-3.0
+│   └── .config
+│       └── gtk-3.0
+│           └── gtk.css
 ├── hypr
 │   └── .config
 │       └── hypr

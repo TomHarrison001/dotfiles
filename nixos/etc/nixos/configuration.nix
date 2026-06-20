@@ -83,30 +83,29 @@
     vim
     hyprland
     waybar
-    #mako
-    #libnotify
     hyprpaper
     alacritty
-    kdePackages.dolphin
+    thunar
     wofi
+    firefox
     pywal
     pywalfox-native
-    font-awesome
     fastfetch
-    firefox
+    font-awesome
     git
     vscode
+    #mako
+    #libnotify
     #libgcc
     #clang
-    #unzip
     #python3
     #lua
-    #discord
+    #unzip
+    #vlc
     #gimp2
     #insomnia
-    #vlc
+    #discord
     #obs-studio
-    #plex-desktop
     #spotify
     #makemkv
   ];

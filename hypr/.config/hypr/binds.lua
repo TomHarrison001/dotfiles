@@ -1,5 +1,5 @@
 local terminal    = "alacritty"
-local fileManager = "dolphin"
+local fileManager = "thunar"
 local menu        = "wofi --show drun"
 
 --------------------
