@@ -11,4 +11,4 @@ PS1='[\u@\h \W]$ '
 
 (cat ~/.cache/wal/sequences &)
 
-export PATH="$HOME/.config/emacs/bin:$PATH"
+export PATH="$HOME/.config/emacs/bin:$HOME/.cargo/env:$PATH"

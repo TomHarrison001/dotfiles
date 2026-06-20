@@ -2,14 +2,16 @@
 They're finally organized (for now). I've previously used Arch and NixOS, both with hyprland. I've customised my waybar, terminal and firefox based on the colours of my background (also included).
 
 ## Contents
-- [Files](#files)
-- [Arch Wifi](#arch-wifi)
-- [Nixos Wifi](#nixos-wifi)
-- [Nixos Flake](#nixos-flake)
-- [Bluetoothctl](#bluetoothctl)
-- [Github SSH](#github-ssh)
+- [files](#files)
+- [arch wifi](#arch-wifi)
+- [nixos wifi](#nixos-wifi)
+- [nixos flake](#nixos-flake)
+- [pywal](#pywal)
+- [pywalfox](#pywalfox)
+- [bluetoothctl](#bluetoothctl)
+- [github ssh](#github-ssh)
 - [doom sync](#doom-sync)
-- [Disc Drive](#disc-drive)
+- [disc drive](#disc-drive)
 
 ### Files
 
@@ -23,9 +25,9 @@ They're finally organized (for now). I've previously used Arch and NixOS, both w
 ├── hypr
 │   └── .config
 │       └── hypr
-│           ├── binds.conf
-│           ├── colours.conf
-│           ├── hyprland.conf
+│           ├── binds.lua
+│           ├── colours.lua
+│           ├── hyprland.lua
 │           └── hyprpaper.conf
 ├── nixos
 │   └── etc
@@ -68,6 +70,20 @@ nmcli device wifi connect <SSID> password <password>
 ```bash
 nix develop /etc/nixos/
 ```
+
+### pywal
+
+```bash
+wal -i "file/path/to/image"
+```
+
+### pywalfox
+
+```bash
+pywalfox install
+```
+Install Firefox extension
+Fetch Pywal colors
 
 ### bluetoothctl
 

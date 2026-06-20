@@ -83,8 +83,8 @@
     vim
     hyprland
     waybar
-    mako
-    libnotify
+    #mako
+    #libnotify
     hyprpaper
     kitty
     kdePackages.dolphin
@@ -96,19 +96,19 @@
     firefox
     git
     vscode
-    libgcc
-    clang
-    unzip
-    python3
-    lua
-    discord
-    gimp2
-    insomnia
-    vlc
-    obs-studio
-    plex-desktop
-    spotify
-    makemkv
+    #libgcc
+    #clang
+    #unzip
+    #python3
+    #lua
+    #discord
+    #gimp2
+    #insomnia
+    #vlc
+    #obs-studio
+    #plex-desktop
+    #spotify
+    #makemkv
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -136,7 +136,7 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.11"; # Did you read the comment?
+  system.stateVersion = "26.05"; # Did you read the comment?
 
   programs.hyprland = {
     enable = true;
@@ -167,10 +167,6 @@
     settings = {
       default_session = {
         command = "${pkgs.greetd}/bin/agreety --cmd start-hyprland";
-      };
-      initial_session = {
-        command = "start-hyprland";
-        user = "rockafelladev";
       };
     };
   };
