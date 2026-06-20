@@ -1,6 +1,15 @@
-* {
+window.thunar {
     font-family: "Terminess Nerd Font", sans-serif;
     font-size: 11pt;
+    color: #ffffff;
+    background-color: #274c5c;
+}
+
+window.thunar toolbar,
+window.thunar scrolledwindow.sidebar,
+window.thunar scrolledwindow.sidebar treeview.view,
+window.thunar scrolledwindow.standard-view,
+window.thunar scrolledwindow.standard-view  widget.view {
     color: #ffffff;
     background-color: #274c5c;
 }
