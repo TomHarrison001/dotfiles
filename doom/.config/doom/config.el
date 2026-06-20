@@ -71,7 +71,7 @@
 
         ;; Journal entry
         ("j" "journal" entry
-         (file+olp+datatree ,(concat org-directory "journal.org"))
+         (file+olp+datetree ,(concat org-directory "journal.org"))
          "* %U\n%?\n")
 
         ;; Note with link to source
