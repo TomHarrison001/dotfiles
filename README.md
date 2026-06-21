@@ -12,7 +12,6 @@ They're finally organized (for now). I've previously used Arch and NixOS, both w
     - [pywalfox](#pywalfox)
     - [bluetoothctl](#bluetoothctl)
     - [github ssh](#github-ssh)
-    - [doom sync](#doom-sync)
     - [disc drive](#disc-drive)
 
 ### File Overview
@@ -90,8 +89,8 @@ wal -i "file/path/to/image"
 ```bash
 pywalfox install
 ```
-Install Firefox extension
-Fetch Pywal colors
+1. Install Firefox extension
+2. Fetch Pywal colors
 
 ### bluetoothctl
 
@@ -114,12 +113,6 @@ enter file in which to save: ~/.ssh
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
-```
-
-### doom sync
-
-```bash
-doom sync
 ```
 
 ### disc drive
