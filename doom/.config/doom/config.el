@@ -47,43 +47,51 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(after! org
+      (setq org-directory "~/org/")
+)
 
 ;; List files that org-agenda will use.
-(setq org-agenda-files
-      (list (concat org-directory "tasks.org")
-            (concat org-directory "notes.org")
-            (concat org-directory "journal.org")))
+(after! org
+      (setq org-agenda-files
+            (list (concat org-directory "tasks.org")
+                  (concat org-directory "notes.org")
+                  (concat org-directory "journal.org")))
+)
 
 ;; Defines the global feedback destination for all your Org notes.
-(setq org-default-notes-file (concat org-directory "notes.org"))
+(after! org
+      (setq org-default-notes-file (concat org-directory "notes.org"))
+)
 
 ;; (Optional) Creates custom templates
 ;; NOTE '%U' is an inactive timestamp meaning the item will not show
 ;; in org-agenda. Use '&^t' for active timestamps instead.
 ;; You can manually switch active/inactive with SHIFT-up/down.
-(setq org-capture-templates
-      `(
-        ;; Idea capture
-        ("i" "idea" entry
-         (file ,org-default-notes-file)
-         "* %? :idea:\n%U\n")
+(after! org
+      (setq org-capture-templates
+            `(
+              ;; Idea capture
+              ("i" "idea" entry
+               (file ,org-default-notes-file)
+               "* :idea: %?\n%U\n")
 
-        ;; Journal entry
-        ("j" "journal" entry
-         (file+olp+datetree ,(concat org-directory "journal.org"))
-         "* %U\n%?\n")
+              ;; Note with link to source
+              ("n" "note" entry
+               (file ,org-default-notes-file)
+               "* :note: %?\n%U %a\n")
 
-        ;; Note with link to source
-        ("n" "note" entry
-         (file ,org-default-notes-file)
-         "* %? :note:\n%U\n%a\n")
+              ;; Todo with context
+              ("t" "task" entry
+               (file+headline ,(concat org-directory "tasks.org") "Tasks")
+               "* TODO %?\n%^t %a\n")
 
-        ;; Todo with context
-        ("t" "task" entry
-         (file+headline ,(concat org-directory "tasks.org") "Tasks")
-         "* TODO %?\n%^t\n%a\n")
-        ))
+              ;; Journal entry
+              ("j" "journal" entry
+               (file+olp+datetree ,(concat org-directory "journal.org"))
+               "* %?\n%U\n")
+              ))
+)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
