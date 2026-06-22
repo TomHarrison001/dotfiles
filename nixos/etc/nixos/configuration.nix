@@ -81,6 +81,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
+    emacs
     hyprland
     waybar
     hyprpaper
