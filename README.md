@@ -11,6 +11,7 @@ They're finally organized (for now). I've previously used Arch and NixOS, both w
     - [pywal](#pywal)
     - [pywalfox](#pywalfox)
     - [bluetoothctl](#bluetoothctl)
+    - [wpctl](#wpctl)
     - [github ssh](#github-ssh)
     - [disc drive](#disc-drive)
 
@@ -25,6 +26,13 @@ They're finally organized (for now). I've previously used Arch and NixOS, both w
 │           └── packages.el
 ├── Downloads
 │   └── tanjiroBackground.png
+├── fish
+│   └── .config
+│       └── fish
+│           ├── config.fish
+│           └── functions
+|               └── fish_prompt.fish
+│
 ├── gtk-3.0
 │   └── .config
 │       └── gtk-3.0
@@ -44,8 +52,8 @@ They're finally organized (for now). I've previously used Arch and NixOS, both w
 ├── waybar
 │   └── .config
 │       └── waybar
-|           ├── scripts
-|           |   └── launch.sh
+│           ├── scripts
+│           │   └── launch.sh
 │           ├── config.jsonc
 │           └── style.css
 ├── wofi
@@ -103,6 +111,13 @@ scan on
 pair <hex>
 connect <hex>
 trust <hex>
+```
+
+### wpctl
+
+```bash
+wpctl status
+wpctl set-default <ID>
 ```
 
 ### github ssh
