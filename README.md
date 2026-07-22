@@ -31,7 +31,7 @@ They're finally organized (for now). I've previously used Arch and NixOS, both w
 │       └── fish
 │           ├── config.fish
 │           └── functions
-|               └── fish_prompt.fish
+│               └── fish_prompt.fish
 │
 ├── gtk-3.0
 │   └── .config

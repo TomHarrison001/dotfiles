@@ -1,5 +1,5 @@
 [terminal.shell]
-program = "/usr/bin/fish"
+program = "/run/current-system/sw/bin/fish"
 args = ["--login"]
 
 [font]

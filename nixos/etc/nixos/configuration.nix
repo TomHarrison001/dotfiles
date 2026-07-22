@@ -57,12 +57,15 @@
   # Configure console keymap
   console.keyMap = "uk";
 
+  programs.fish.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rockafelladev = {
     isNormalUser = true;
     description = "rockafelladev";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell = pkgs.fish;
   };
 
   # Enable sound with pipewire.
@@ -108,7 +111,7 @@
     #discord
     #obs-studio
     #spotify
-    #makemkv
+    makemkv
   ];
 
   fonts.packages = with pkgs; [
