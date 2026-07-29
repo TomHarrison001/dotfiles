@@ -14,6 +14,7 @@ They're finally organized (for now). I've previously used Arch and NixOS, both w
     - [wpctl](#wpctl)
     - [github ssh](#github-ssh)
     - [disc drive](#disc-drive)
+    - [mount drive](#mount-drive)
 
 ### File Overview
 
@@ -134,4 +135,13 @@ cat ~/.ssh/id_ed25519.pub
 
 ```bash
 modprobe sg
+```
+
+### mount drive
+
+```bash
+sudo mkdir -p /mnt/hdd1
+lsblk -f
+sudo mount /dev/sdAX /mnt/hdd1
+sudo umount /mnt/hdd1
 ```
