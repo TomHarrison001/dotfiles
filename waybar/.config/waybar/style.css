@@ -5,8 +5,8 @@
 }
 
 window#waybar {
-    /* background: rgba(0, 0, 0, 0); */
-    background: #274c5c;
+    background: rgba(0, 0, 0, 0);
+    /* background: #274c5c; */
     margin: 0px;
 }
 
@@ -37,6 +37,7 @@ button:hover {
 #workspaces button.active {
     background-color: #e8eaed;
     color: #323d49;
+    border-radius: 3px;
 }
 
 #mode {
@@ -61,8 +62,10 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    padding: 0px 5px;
+    padding: 0px 10px;
+    margin: 0px 1px;
     background-color: #274C5C;
+    border-radius: 10px;
 }
 
 #battery, #battery.charging, #battery.plugged {
