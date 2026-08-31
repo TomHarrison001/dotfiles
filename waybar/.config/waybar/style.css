@@ -2,19 +2,12 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "Terminess Nerd Font";
     font-size: 12px;
-    border-radius: 0px;
-    transition: 0.1s ease-in-out;
 }
 
 window#waybar {
-    background-color: transparent;
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
-}
-
-window#waybar.hidden {
-    opacity: 0.2;
+    /* background: rgba(0, 0, 0, 0); */
+    background: #274c5c;
+    margin: 0px;
 }
 
 button {
@@ -31,11 +24,6 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #274C5C;
-}
-
 #workspaces button {
     padding: 0px 0px;
     background-color: transparent;
@@ -44,15 +32,6 @@ button:hover {
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
-}
-
-#workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
 }
 
 #workspaces button.active {
@@ -65,8 +44,8 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-#clock,
 #battery,
+#clock,
 #cpu,
 #memory,
 #disk,
@@ -83,26 +62,6 @@ button:hover {
 #power-profiles-daemon,
 #mpd {
     padding: 0px 5px;
-    margin: 0px 0px;
-    color: #ffffff;
-}
-
-#window,
-#workspaces {
-    margin: 0px 2px;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
-#clock {
     background-color: #274C5C;
 }
 
@@ -126,10 +85,6 @@ button:hover {
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
-
-#power-profiles-daemon {
-    padding: 0 5px;
 }
 
 #power-profiles-daemon.performance,

@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 24, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -11,15 +11,14 @@
         "custom/media"
     ],
     "modules-center": [
+        "clock"
     ],
     "modules-right": [
-        "pulseaudio",
         "backlight",
+        "pulseaudio",
 	"network",
         "battery",
-        "battery#bat2",
 	"power-profiles-daemon",
-        "clock"
     ],
     "hyprland/workspaces": {
 	"format": "{name}",
@@ -89,8 +88,9 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+	"format": "{:%H:%M}",
+	"format-alt": "{:%H:%M %d/%m/%Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -153,7 +153,8 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        //"format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
