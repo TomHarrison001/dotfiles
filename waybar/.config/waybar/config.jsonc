@@ -16,9 +16,8 @@
     "modules-right": [
         "backlight",
         "pulseaudio",
-	"network",
+	    "network",
         "battery",
-	"power-profiles-daemon",
     ],
     "hyprland/workspaces": {
 	"format": "{name}",
