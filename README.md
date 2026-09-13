@@ -124,7 +124,7 @@ wpctl set-default <ID>
 ### github ssh
 
 ```bash
-ssh-keygen -t ed25519 -c "email@example.com"
+ssh-keygen -t ed25519 -C "email@example.com"
 enter file in which to save: ~/.ssh
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
