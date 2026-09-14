@@ -83,35 +83,33 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim
-    emacs
-    hyprland
-    waybar
-    hyprpaper
     alacritty
-    thunar
-    wofi
+    clang
+    cmake
+    discord
+    emacs
+    fastfetch
     firefox
+    font-awesome
+    gimp2
+    git
+    hyprland
+    hyprpaper
+    insomnia
+    libgcc
+    libreoffice
+    makemkv
+    obs-studio
+    python3
     pywal
     pywalfox-native
-    fastfetch
-    font-awesome
-    git
+    spotify
+    thunar
+    vim
+    vlc
     vscode
-    #mako
-    #libnotify
-    #libgcc
-    #clang
-    #python3
-    #lua
-    #unzip
-    #vlc
-    #gimp2
-    #insomnia
-    #discord
-    #obs-studio
-    #spotify
-    makemkv
+    waybar
+    wofi
   ];
 
   fonts.packages = with pkgs; [
