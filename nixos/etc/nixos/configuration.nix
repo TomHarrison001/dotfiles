@@ -99,7 +99,14 @@
     libgcc
     libreoffice
     makemkv
-    obs-studio
+
+    obs-studio-plugins.wlrobs
+    obs-studio-plugins.obs-backgroundremoval
+    obs-studio-plugins.obs-pipewire-audio-capture
+    obs-studio-plugins.obs-vaapi
+    obs-studio-plugins.obs-gstreamer
+    obs-studio-plugins.obs-vkcapture
+
     python3
     pywal
     pywalfox-native
@@ -111,6 +118,25 @@
     waybar
     wofi
   ];
+
+  programs.obs-studio = {
+    enable = true;
+
+    package = (
+      pkgs.obs-studio.override {
+        cudaSupport = true;
+      }
+    );
+
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-backgroundremoval
+      obs-pipewire-audio-capture
+      obs-vaapi
+      obs-gstreamer
+      obs-vkcapture
+    ];
+  };
 
   fonts.packages = with pkgs; [
     nerd-fonts.terminess-ttf
@@ -164,8 +190,19 @@
     nvidia.modesetting.enable = true;
   };
 
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-hyprland
+    ];
+
+    config = {
+      common = {
+        default = [ "gtk" ];
+      };
+    };
+  };
 
   services.greetd = {
     enable = true;
