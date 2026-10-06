@@ -14,7 +14,7 @@
 	"clock": {
 		"format": "{:%H:%M}",
 		"format-alt": "{:%a %d %b}",
-		"tooltip-format": false,
+		"tooltip": false,
 	},
 	"backlight": {
 		"format": "{percent}% {icon}",
